@@ -15,5 +15,6 @@ jobs:
         ftp-server: ftp://ftp.testin.ir/
         ftp-username: testin
         ftp-password: ${{ secrets.ftp_password }}
+        local-dir: ./public_html/
         git-ftp-args: --dry-run
 
