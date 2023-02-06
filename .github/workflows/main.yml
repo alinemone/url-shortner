@@ -14,3 +14,4 @@ jobs:
         server: ftp.testin.ir
         username: testin
         password: ${{ secrets.ftp_password }}
+        server-dir: /public_html/
