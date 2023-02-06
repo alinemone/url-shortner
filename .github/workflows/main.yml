@@ -7,7 +7,8 @@ jobs:
     steps:
     - name:  Get latest code
       uses: actions/checkout@v3.3.0
-    
+      with:
+        fetch-depth: 2
     - name:  Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
@@ -15,3 +16,6 @@ jobs:
         username: testin
         password: ${{ secrets.ftp_password }}
         server-dir: /public_html/
+
+
+
