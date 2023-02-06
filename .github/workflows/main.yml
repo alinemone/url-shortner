@@ -1,20 +1,20 @@
 
+
 on: push
-name: Deploy url shortener on push
+name: 🚀 Deploy website on push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
       with:
         fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@v3.1.2-patch
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        ftp-server: ftp://ftp.testin.ir/
-        ftp-username: testin
-        ftp-password: ${{ secrets.ftp_password }}
-        local-dir: ./
-        git-ftp-args: --dry-run
-
+        server: ftp.testin.ir
+        username: testin
+        password: ${{ secrets.ftp_password }}
