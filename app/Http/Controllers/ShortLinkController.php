@@ -28,7 +28,7 @@ class ShortLinkController extends Controller
 
     public function pageShortenerUrl()
     {
-        return view('Link.index');
+        return view('link.index');
     }
 
     /**
