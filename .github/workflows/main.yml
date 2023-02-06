@@ -12,7 +12,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.2
       with:
-        ftp-server: ftp://ftp.testin.ir/
+        ftp-server: ftp://ftp.testin.ir/public_html/
         ftp-username: testin
         ftp-password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/
+
