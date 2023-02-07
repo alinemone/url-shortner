@@ -11,8 +11,7 @@ jobs:
     - name:  📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        timeout_minutes : 10
-        max_attempts : 3
+        timeout : 10
         server: ftp.testin.ir
         username: testin
         password: ${{ secrets.ftp_password }}
