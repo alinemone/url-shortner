@@ -12,6 +12,9 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v3.1.2-patch
       with:
         timeout : 10
-        ftp-server: ftp://ftp.testin.ir/
-        ftp-username: testin
-        ftp-password: ${{ secrets.ftp_password }}
+        protocol: ftps
+        server: ftp.testin.ir
+        username: testin
+        password: ${{ secrets.ftp_password }}
+        server-dir: /public_html/
+        
